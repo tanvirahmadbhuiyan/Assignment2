@@ -1,0 +1,349 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root {
+    --white-color: #FFFFFF;
+    --primary-color: #FF900E;
+    --bg-banner: rgba(255, 144, 14, 0.1);
+    --bold-text-color: #131313;
+    --p-text-color: #727272;
+    --primary-font: 'Work Sans', sans-serif;
+}
+.container {
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
+h2.heading {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--bold-text-color);
+    padding-bottom: 20px;
+    width: 80%;
+}
+.text {
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--p-text-color);
+    padding-bottom: 28px;
+}
+.facts_heading .text, .brand_heading .text {
+    width: 45%;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+a {
+    color: var(--bold-text-color);
+    font-size: 18px;
+}
+/*NAVBAR*/
+.logo {
+    font-weight: 700;
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 80px;
+    background-color: var(--bg-banner);
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 18px;
+}
+.nav li:hover::after{
+    transform: scaleX(.9);
+}
+.nav li::after{
+    display:block;
+    content: '';
+    border-bottom: solid 3px #E02C6D;  
+    transform: scaleX(0);  
+    transition: transform 250ms ease-in-out;
+}
+
+
+/*BANNER SECTION*/
+.header {
+    background-color: var(--bg-banner);
+    text-align: center;
+    padding-bottom: 40px;
+}
+.banner_info {
+    text-align: center;
+    padding: 100px 0 100px;
+}
+.banner_info h1 {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #131313;
+    line-height: 75px;
+    padding-bottom: 25px;
+}
+.banner_info p {
+    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+/*FEATURED SECTION*/
+
+.features, .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.features {
+    align-items: center;
+    gap: 75px;
+    padding: 85px 0 130px;
+}
+.gallery {
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.gallery img{
+    width: 100%;
+    object-fit: cover;
+}
+.gallery_note .heading {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--p-text-color)
+}
+.gallery_note .text {
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+/*FAQS SECTION*/
+.faqs {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+    gap: 120px;
+}
+.faq_heading .heading {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+    padding-bottom: 0;
+}
+.faq_heading .text {
+    margin-top: 24px;
+}
+
+.question_answer {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 20px 30px 15px;
+    margin-bottom: 20px;
+    
+}
+.question_answer .question {
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: var(--bold-text-color);
+    
+}
+.experience {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 46px 40px;
+    border-radius: 8px;
+    width: 340px;
+    position: relative;
+    top: -250px;
+    left: 48%;
+    line-height: 70px;
+    text-align: center;
+}
+.experience h2 {
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 70px;
+}
+.experience p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+}
+.faq_image > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/*FACTS SECTION*/
+.fact_content {
+    padding-bottom: 160px;
+}
+
+.achievements_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 100px;
+    margin-top: 60px;
+}
+.achievements_icon img {
+    padding-bottom: 20px;
+}
+.achievements_card {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 45px 25px;
+    transition: all 600ms ease-in-out;
+}
+.achievements_card h3 {
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--bold-text-color);
+    padding-bottom: 5px;
+}
+.achievements_card p {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--p-text-color);
+}
+
+.achievements_card:hover {
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px) scale(0.5) rotate(360deg);
+
+}
+
+/*BRANDS SECTION*/
+
+.brand_heading h2, .brand_heading p {
+    text-align: center;
+    margin: 0 auto;
+}
+.brand_logo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: var(--bold-text-color);
+    margin: 30px 0 180px;
+    filter: grayscale(100%);
+}
+
+/*FOOTER SECTION*/
+.footer {
+    text-align: center;
+    background: #FFF4E7;
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 215px;
+}
+.footer_copyright {
+    font-size: 18px;
+    color: var(--p-text-color);
+    justify-content: center;
+    padding: 44px 0;
+}
+
+/*MEDIA QUERY FOR SMALL DEVICE*/
+
+@media only screen and (max-width: 650px) {
+    .container, 
+    nav, .header,
+    .facts_heading .text, 
+    .brand_heading .text, 
+    .figure > img, 
+    form input[type="text"] {
+        width: 100%;
+    }
+    h2.heading {
+        font-size: 36px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    .features {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 80px 20px;
+    }
+    .faqs, .features {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .experience {
+        display: none;
+    }
+    .faq_image img {
+        padding-right: 30px;
+    }
+    .achievements_cards, .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .brand_logo {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 20px;
+        
+    }
+    .brand_logo >img {
+        width: 80%;
+    }
+    .footer {
+        margin-bottom: 100px;
+    }
+}
+
+/*TABLET DEVICES*/
+@media only screen and (min-width: 651px) and (max-width: 992px) {
+    .container,
+     .figure > img,
+     .facts_heading .text, 
+    .brand_heading .text {
+        width: 100%;
+    }
+    .experience {
+        display: none;
+    }
+    .faqs {
+        grid-template-columns: 1fr;
+    }
+    .achievements_cards{
+        column-gap: 20px;
+    }
+    .brand_logo > img {
+        width: 150px;
+    }
+    .faq_image img {
+        margin-bottom: 50px;
+    }
+
